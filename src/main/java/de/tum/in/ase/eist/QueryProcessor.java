@@ -49,10 +49,8 @@ public class QueryProcessor {
                 list.add(Integer.valueOf(array[i]));
             }
 
-            int biggest = list.get(9);
-
             for (int i = 9; i < array.length-1; i++){
-                if (Math.sqrt(list.get(i)) % 1 == 0 & Math.cbrt(list.get(i)) % 1 == 0) {
+                if (Math.floor(Math.sqrt(list.get(i))) == Math.ceil(Math.sqrt(list.get(i))) & Math.floor(Math.cbrt(list.get(i))) == Math.ceil(Math.cbrt(list.get(i)))) {
                    return String.valueOf(list.get(i));
                 }
             }
