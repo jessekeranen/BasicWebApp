@@ -44,9 +44,9 @@ public class QueryProcessor {
 
         } else if (query.contains("cubic")) {
             String[] array = query.split(" ");
-            ArrayList<Integer> list = new ArrayList<Integer>();
+            ArrayList<Double> list = new ArrayList<Double>();
             for (int i = 12; i < array.length; i++){
-                list.add(Integer.valueOf(array[i]));
+                list.add(Double.valueOf(array[i]));
             }
 
             for (int i = 9; i < array.length-1; i++){
