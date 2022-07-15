@@ -41,7 +41,22 @@ public class QueryProcessor {
             String[] array = query.split(" ");
             int product =  Integer.valueOf(array[3]) * Integer.valueOf(array[6]);
             return String.valueOf(product);
-        }
-        else return "";
+
+        } else if (query.contains("cubic")) {
+            String[] array = query.split(" ");
+            ArrayList<Integer> list = new ArrayList<Integer>();
+            for (int i = 12; i < array.length; i++){
+                list.add(Integer.valueOf(array[i]));
+            }
+
+            int biggest = list.get(9);
+
+            for (int i = 9; i < array.length-1; i++){
+                if (Math.sqrt(list.get(i)) % 1 == 0 & Math.cbrt(list.get(i)) % 1 == 0) {
+                   return String.valueOf(list.get(i));
+                }
+            }
+            return String.valueOf(list.get(list.size()-1));
+        } else return "";
     }
 }
