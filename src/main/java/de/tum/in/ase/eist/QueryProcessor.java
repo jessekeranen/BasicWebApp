@@ -37,6 +37,10 @@ public class QueryProcessor {
             }
 
             return String.valueOf(biggest);
+        } else if (query.contains("multiplied")){
+            String[] array = query.split(" ");
+            int product =  Integer.valueOf(array[3]) * Integer.valueOf(array[6]);
+            return String.valueOf(product);
         }
         else return "";
     }
