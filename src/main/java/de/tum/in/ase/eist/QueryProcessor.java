@@ -50,7 +50,7 @@ public class QueryProcessor {
             }
 
             for (int i = 9; i < array.length-1; i++){
-                if (Math.floor(Math.sqrt(list.get(i))) == Math.ceil(Math.sqrt(list.get(i))) & Math.floor(Math.cbrt(list.get(i))) == Math.ceil(Math.cbrt(list.get(i)))) {
+                if (Math.floor(Math.sqrt(list.get(i))) == Math.ceil(Math.sqrt(list.get(i))) && Math.floor(Math.cbrt(list.get(i))) == Math.ceil(Math.cbrt(list.get(i)))) {
                    return String.valueOf(list.get(i));
                 }
             }
