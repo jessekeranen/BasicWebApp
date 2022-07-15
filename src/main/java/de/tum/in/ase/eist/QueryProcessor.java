@@ -15,7 +15,7 @@ public class QueryProcessor {
            return "Jesse";
         } else if (query.contains("plus")){ // TODO extend the programm here
             String[] array = query.split(" ");
-            int sum =  Integer.valueOf(array[2]) + Integer.valueOf(array[4]);
+            int sum =  Integer.valueOf(array[3]) + Integer.valueOf(array[5]);
             return String.valueOf(sum);
         }
         else return "";
